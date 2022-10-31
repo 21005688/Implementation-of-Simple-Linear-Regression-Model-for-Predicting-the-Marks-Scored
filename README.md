@@ -11,8 +11,8 @@ To write a program to predict the marks scored by a student using the simple lin
 1. Import the required libraries and read the dataframe.
 2. Assign hours to X and scores to Y.
 3. Implement training set and test set of the dataframe.
-4.Plot the required graph both for test data and training data.
-5.Find the values of MSE , MAE and RMSE.
+4. Plot the required graph both for test data and training data.
+5. Find the values of MSE , MAE and RMSE.
 
 ## Program:
 ```
@@ -25,7 +25,8 @@ import pandas as pd
 import numpy as np
 df=pd.read_csv('student_scores.csv')
 print(df)
-
+df.head()
+df.tail()
 X=df.iloc[:,:-1].values
 Y=df.iloc[:,1].values
 print(X,Y)
@@ -57,7 +58,7 @@ mae=mean_absolute_error(Y_test,Y_pred)
 print('MAE = ',mae)
 rmse=np.sqrt(mse)
 print('RMSE = ',rmse)
-*/
+/*
 ```
 
 ## Output:
